@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Masoya Privacy Policy — How we collect, use, and protect your data." />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Privacy Policy · Masoya</title>
+
+    <style>
+        :root {
+            --bg: #f8fafb;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #5b6e85;
+            --accent: #dc2645;
+            --accent-soft: #fef1f3;
+            --accent-border: #f7ccd4;
+            --border: #e8ecf1;
+            --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.04);
+            --shadow-md: 0 6px 24px rgba(16, 24, 40, 0.07);
+            --shadow-lg: 0 18px 48px rgba(16, 24, 40, 0.10);
+            --radius-sm: 10px;
+            --radius: 18px;
+            --radius-lg: 24px;
+            --max-width: 920px;
+            --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --transition: 180ms ease-out;
+            --progress: 0%;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f1419;
+            --card-bg: #1a1f27;
+            --text: #e6ecf3;
+            --text-secondary: #94a3b8;
+            --accent: #f34b68;
+            --accent-soft: #251318;
+            --accent-border: #3d1f28;
+            --border: #29303b;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.18);
+            --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.28);
+            --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.35);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #0f1419;
+                --card-bg: #1a1f27;
+                --text: #e6ecf3;
+                --text-secondary: #94a3b8;
+                --accent: #f34b68;
+                --accent-soft: #251318;
+                --accent-border: #3d1f28;
+                --border: #29303b;
+                --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.18);
+                --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.28);
+                --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.35);
+            }
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.72;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: var(--progress);
+            background: linear-gradient(90deg, var(--accent), #f7728a);
+            z-index: 1000;
+            border-radius: 0 2px 2px 0;
+            transition: width 60ms linear;
+            pointer-events: none;
+        }
+
+        .wrap {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 20px 18px 72px;
+        }
+
+        .hero {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px 32px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 160px;
+            height: 160px;
+            background: radial-gradient(circle, var(--accent-soft) 0%, transparent 72%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-row {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 14px;
+        }
+
+        .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            object-fit: cover;
+            display: block;
+            background: #ffffff;
+            border: 1.5px solid var(--accent-border);
+            box-shadow: 0 8px 22px rgba(220, 38, 69, 0.13);
+            transition: transform var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.04);
+        }
+
+        .brand-name {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--accent);
+            letter-spacing: -0.3px;
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            line-height: 1.18;
+            color: var(--text);
+        }
+
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 640px;
+            margin: 0 0 18px;
+        }
+
+        .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 7px 14px;
+            background: var(--card-bg);
+            font-weight: 500;
+            white-space: nowrap;
+            transition: border-color var(--transition);
+        }
+
+        .pill .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        .toc {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 18px 20px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 24px;
+            position: sticky;
+            top: 16px;
+            z-index: 20;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            background: color-mix(in srgb, var(--card-bg) 92%, transparent);
+            transition: box-shadow var(--transition), border-color var(--transition);
+        }
+
+        .toc.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .toc-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 11px;
+        }
+
+        .toc-header strong {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .toc-header .icon {
+            font-size: 15px;
+        }
+
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .toc-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            border-radius: 999px;
+            padding: 6px 13px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all var(--transition);
+            white-space: nowrap;
+        }
+
+        .toc-links a:hover,
+        .toc-links a:focus-visible {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-soft);
+            outline: none;
+        }
+
+        .toc-links a.active {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 26px 28px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 16px;
+            border-left: 4px solid transparent;
+            transition: all var(--transition);
+        }
+
+        .card:hover {
+            border-left-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h2 .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 15px;
+            font-weight: 700;
+            flex-shrink: 0;
+            border: 1px solid var(--accent-border);
+        }
+
+        .card p {
+            margin: 10px 0;
+            color: var(--text);
+        }
+
+        .card ul {
+            margin: 10px 0 0 8px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .card li {
+            margin: 9px 0;
+            padding-left: 22px;
+            position: relative;
+            color: var(--text);
+        }
+
+        .card li::before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 9px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.7;
+        }
+
+        .card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition);
+            word-break: break-all;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .deletion-link-box {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            margin: 14px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-weight: 500;
+        }
+
+        .deletion-link-box .link-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .copy-btn {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            color: var(--accent);
+            padding: 7px 13px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            font-family: var(--font-sans);
+            transition: all var(--transition);
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .copy-btn.copied {
+            background: #16a34a;
+            border-color: #16a34a;
+            color: #fff;
+        }
+
+        .footer {
+            margin-top: 28px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13.5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .btt-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 50;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(220, 38, 69, 0.28);
+            opacity: 0;
+            transform: translateY(16px);
+            pointer-events: none;
+            transition: all 260ms ease-out;
+        }
+
+        .btt-float.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .btt-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 32px rgba(220, 38, 69, 0.36);
+        }
+
+        .btt-float:active {
+            transform: scale(0.94);
+        }
+
+        :focus-visible {
+            outline: 2.5px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        @media print {
+            .progress-bar,
+            .toc,
+            .btt-float,
+            .copy-btn,
+            .actions {
+                display: none !important;
+            }
+            body {
+                background: #fff;
+                color: #000;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                border-left: 3px solid #000;
+                break-inside: avoid;
+                margin-bottom: 10px;
+                padding: 16px 18px;
+            }
+            .hero {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                padding: 20px;
+            }
+            .wrap {
+                max-width: 100%;
+                padding: 0;
+            }
+            a {
+                color: #000;
+                text-decoration: underline;
+            }
+            .card h2 .section-num {
+                background: #eee;
+                color: #000;
+                border: 1px solid #ccc;
+            }
+            .deletion-link-box {
+                background: #f9f9f9;
+                border: 1px solid #ccc;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .hero {
+                padding: 24px 18px 20px;
+            }
+            .hero h1 {
+                font-size: 30px;
+            }
+            .card {
+                padding: 20px 16px;
+            }
+            .card h2 {
+                font-size: 19px;
+            }
+            .toc {
+                position: static;
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                background: var(--card-bg);
+            }
+            .toc-links a {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+            .btt-float {
+                bottom: 18px;
+                right: 16px;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            .deletion-link-box {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+            .meta-row {
+                gap: 6px;
+            }
+            .pill {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+            .toc-links {
+                gap: 5px;
+            }
+            .toc-links a {
+                font-size: 11px;
+                padding: 5px 9px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+    <div class="wrap">
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="brand-row">
+                <img src="app_icon.png" alt="Masoya app icon" class="logo" width="46" height="46" loading="eager" />
+                <span class="brand-name">Masoya</span>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">
+                This Privacy Policy explains how Masoya collects, uses, stores,
+                protects, and shares your information when you use the Masoya
+                mobile application and related services.
+            </p>
+            <div class="meta-row">
+                <span class="pill"><span class="dot"></span> <strong>App:</strong>&nbsp;Masoya</span>
+                <span class="pill"><span class="dot"></span> <strong>Platform:</strong>&nbsp;Android &amp; iOS</span>
+                <span class="pill"><span class="dot"></span> <strong>Updated:</strong>&nbsp;May&nbsp;19,&nbsp;2026</span>
+            </div>
+        </header>
+
+        <!-- Sticky TOC -->
+        <nav class="toc" id="tocNav" aria-label="Quick Navigation">
+            <div class="toc-header">
+                <span class="icon">&#9776;</span>
+                <strong>Jump to Section</strong>
+            </div>
+            <div class="toc-links" id="tocLinks">
+                <a href="#introduction">Introduction</a>
+                <a href="#information">Information We Collect</a>
+                <a href="#location">Location</a>
+                <a href="#notifications">Notifications</a>
+                <a href="#use">How We Use Data</a>
+                <a href="#firebase">Third-Party Services</a>
+                <a href="#sharing">Data Sharing</a>
+                <a href="#deletion">Account Deletion</a>
+                <a href="#retention">Retention</a>
+                <a href="#security">Security</a>
+                <a href="#children">Children's Privacy</a>
+                <a href="#changes">Policy Changes</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <!-- 1. Introduction -->
+        <section class="card" id="introduction">
+            <h2><span class="section-num">1</span> Introduction</h2>
+            <p>Masoya is a dating and social matching platform designed for adults aged 18 and above. We value your privacy and are committed to protecting your personal information.</p>
+            <p>By using Masoya, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+        </section>
+
+        <!-- 2. Information We Collect -->
+        <section class="card" id="information">
+            <h2><span class="section-num">2</span> Information We Collect</h2>
+            <p>We may collect the following information:</p>
+            <ul>
+                <li>Email address</li>
+                <li>Name or nickname</li>
+                <li>Age and gender</li>
+                <li>Profile photos that you choose to upload</li>
+                <li>Bio and other profile details</li>
+                <li>Likes, matches, and chat messages exchanged between users</li>
+                <li>Device and app usage information</li>
+                <li>Optional location information</li>
+                <li>Push notification tokens used to deliver notifications</li>
+            </ul>
+            <p>When you upload a profile photo, Masoya only accesses the specific image you select using your device's file picker. The app does not access your camera or your files unless you explicitly choose a photo to upload.</p>
+        </section>
+
+        <!-- 3. Location Information -->
+        <section class="card" id="location">
+            <h2><span class="section-num">3</span> Location Information</h2>
+            <p>Masoya may request access to your location to help show nearby users and improve matching features.</p>
+            <p>Location access is completely optional. You can allow or deny location permission at any time from your device settings.</p>
+            <p>If location permission is disabled, nearby matching features may not work properly.</p>
+            <p>We use approximate location information where possible to improve privacy and reduce unnecessary precision.</p>
+        </section>
+
+        <!-- 4. Notifications -->
+        <section class="card" id="notifications">
+            <h2><span class="section-num">4</span> Notifications</h2>
+            <p>Masoya may send notifications for:</p>
+            <ul>
+                <li>New messages</li>
+                <li>New matches</li>
+                <li>Account activity</li>
+                <li>Important updates</li>
+            </ul>
+            <p>Notifications are optional and can be disabled from the app settings or your device settings at any time.</p>
+        </section>
+
+        <!-- 5. How We Use Your Information -->
+        <section class="card" id="use">
+            <h2><span class="section-num">5</span> How We Use Your Information</h2>
+            <p>We use collected information to:</p>
+            <ul>
+                <li>Create and manage your account</li>
+                <li>Provide matching and chat features</li>
+                <li>Deliver push notifications</li>
+                <li>Improve app performance and security</li>
+                <li>Detect spam, abuse, and fraudulent activity</li>
+                <li>Maintain app reliability</li>
+                <li>Provide customer support</li>
+            </ul>
+        </section>
+
+        <!-- 6. Firebase and Third-Party Services -->
+        <section class="card" id="firebase">
+            <h2><span class="section-num">6</span> Firebase and Third-Party Services</h2>
+            <p>Masoya uses trusted third-party services, including Google Firebase, for authentication, database storage, file storage, notifications, and app security.</p>
+            <p>These services may process limited information necessary to provide app functionality.</p>
+            <ul>
+                <li>Firebase Authentication</li>
+                <li>Cloud Firestore</li>
+                <li>Firebase Storage</li>
+                <li>Firebase Cloud Messaging</li>
+            </ul>
+            <p>We do not sell your personal information to third parties.</p>
+        </section>
+
+        <!-- 7. Data Sharing -->
+        <section class="card" id="sharing">
+            <h2><span class="section-num">7</span> Data Sharing</h2>
+            <p>Certain profile information you choose to provide, such as your name, age, bio, profile photo, and approximate location, may be visible to other users of the app.</p>
+            <p>We may also share information when required by law or when necessary to protect our rights, users, or the security of the platform.</p>
+        </section>
+
+        <!-- 8. Account Deletion -->
+        <section class="card" id="deletion">
+    <h2><span class="section-num">8</span> Account Deletion</h2>
+
+    <p>You may delete your account at any time directly from within the app.</p>
+
+    <p>You may also request account or data deletion by contacting us at:</p>
+
+    <div class="contact-row">
+        <strong>Email:</strong>
+        <a href="mailto:masoyaapp@gmail.com">masoyaapp@gmail.com</a>
+    </div>
+
+    <p>
+        When your account is deleted, we delete your authentication record,
+        profile information, and uploaded profile photos from our active systems,
+        unless retention is required for legal, security, fraud prevention,
+        or abuse prevention purposes.
+    </p>
+</section>
+
+        <!-- 9. Data Retention -->
+        <section class="card" id="retention">
+            <h2><span class="section-num">9</span> Data Retention</h2>
+            <p>We retain your information only for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our agreements.</p>
+        </section>
+
+        <!-- 10. Data Security -->
+        <section class="card" id="security">
+            <h2><span class="section-num">10</span> Data Security</h2>
+            <p>We use reasonable technical and organizational safeguards to help protect your information, including secure communication and restricted database access.</p>
+            <p>However, no online service can guarantee absolute security.</p>
+        </section>
+
+        <!-- 11. Children's Privacy -->
+        <section class="card" id="children">
+            <h2><span class="section-num">11</span> Children's Privacy</h2>
+            <p>Masoya is intended only for users who are 18 years old or older.</p>
+            <p>We do not knowingly collect personal information from children. Accounts found to belong to minors may be removed.</p>
+        </section>
+
+        <!-- 12. Changes to This Policy -->
+        <section class="card" id="changes">
+            <h2><span class="section-num">12</span> Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time.</p>
+            <p>Updated versions will be posted within the app or on our website with a revised "Last Updated" date.</p>
+        </section>
+
+        <!-- 13. Contact Us -->
+        <section class="card" id="contact">
+            <h2><span class="section-num">13</span> Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or your personal data, please contact us at:</p>
+            <div class="contact-row">
+                <strong>Email:</strong>
+                <a href="mailto:masoyaapp@gmail.com">masoyaapp@gmail.com</a>
+                <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address to clipboard">Copy</button>
+                <span id="copyFeedback" style="font-size:12px;color:var(--text-secondary);opacity:0;transition:opacity 200ms;">Copied!</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="actions">
+                <button class="copy-btn" onclick="scrollToTop()" style="font-size:14px;padding:10px 18px;">
+                    &uarr;&nbsp; Back to Top
+                </button>
+            </div>
+            <p>&copy; 2026 Masoya. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Floating Back-to-Top -->
+    <button class="btt-float" id="bttFloat" aria-label="Scroll back to top" title="Back to top">
+        &uarr;
+    </button>
+
+    <script>
+        (function() {
+            const progressBar = document.getElementById('progressBar');
+            const tocNav = document.getElementById('tocNav');
+            const tocLinksContainer = document.getElementById('tocLinks');
+            const tocLinks = tocLinksContainer.querySelectorAll('a');
+            const bttFloat = document.getElementById('bttFloat');
+            const copyBtn = document.getElementById('copyEmailBtn');
+            const copyFeedback = document.getElementById('copyFeedback');
+            const sections = document.querySelectorAll('section.card[id]');
+
+            function updateProgress() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const pct = docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) : 0;
+                document.documentElement.style.setProperty('--progress', pct.toFixed(1) + '%');
+            }
+
+            function updateTocShadow() {
+                const stuck = tocNav.getBoundingClientRect().top <= 18;
+                tocNav.classList.toggle('scrolled', stuck && window.scrollY > 40);
+            }
+
+            function updateActiveLink() {
+                let currentId = '';
+                const offset = 110;
+                sections.forEach((sec) => {
+                    const top = sec.getBoundingClientRect().top;
+                    if (top <= offset) {
+                        currentId = sec.getAttribute('id');
+                    }
+                });
+                tocLinks.forEach((link) => {
+                    const href = link.getAttribute('href');
+                    const id = href ? href.replace('#', '') : '';
+                    link.classList.toggle('active', id === currentId);
+                });
+            }
+
+            function updateBttVisibility() {
+                const show = window.scrollY > 500;
+                bttFloat.classList.toggle('visible', show);
+            }
+
+            function onScroll() {
+                updateProgress();
+                updateTocShadow();
+                updateActiveLink();
+                updateBttVisibility();
+            }
+
+            window.scrollToTop = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            bttFloat.addEventListener('click', () => {
+                window.scrollToTop();
+            });
+
+            if (copyBtn) {
+                let copyTimeout;
+                copyBtn.addEventListener('click', async () => {
+                    try {
+                        await navigator.clipboard.writeText('masoyaapp@gmail.com');
+                        copyBtn.textContent = 'Copied!';
+                        copyBtn.classList.add('copied');
+                        copyFeedback.style.opacity = '1';
+                        clearTimeout(copyTimeout);
+                        copyTimeout = setTimeout(() => {
+                            copyBtn.textContent = 'Copy';
+                            copyBtn.classList.remove('copied');
+                            copyFeedback.style.opacity = '0';
+                        }, 1800);
+                    } catch {
+                        const tempInput = document.createElement('input');
+                        tempInput.value = 'masoyaapp@gmail.com';
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        copyBtn.textContent = 'Copied!';
+                        copyBtn.classList.add('copied');
+                        copyFeedback.style.opacity = '1';
+                        clearTimeout(copyTimeout);
+                        copyTimeout = setTimeout(() => {
+                            copyBtn.textContent = 'Copy';
+                            copyBtn.classList.remove('copied');
+                            copyFeedback.style.opacity = '0';
+                        }, 1800);
+                    }
+                });
+            }
+
+            updateProgress();
+            updateTocShadow();
+            updateActiveLink();
+            updateBttVisibility();
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', () => {
+                updateProgress();
+                updateActiveLink();
+            });
+
+            bttFloat.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') bttFloat.blur();
+            });
+        })();
+    </script>
+</body>
+</html>
