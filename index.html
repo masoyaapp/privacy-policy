@@ -597,7 +597,7 @@
             <div class="meta-row">
                 <span class="pill"><span class="dot"></span> <strong>App:</strong>&nbsp;Masoya</span>
                 <span class="pill"><span class="dot"></span> <strong>Platform:</strong>&nbsp;Android &amp; iOS</span>
-                <span class="pill"><span class="dot"></span> <strong>Updated:</strong>&nbsp;June&nbsp;24,&nbsp;2026</span>
+                <span class="pill"><span class="dot"></span> <strong>Updated:</strong>&nbsp;June&nbsp;25,&nbsp;2026</span>
             </div>
         </header>
 
@@ -646,6 +646,7 @@
                 <li>Device and advertising identifiers (such as Google Advertising ID or Apple IDFA)</li>
                 <li>Optional location information</li>
                 <li>Push notification tokens used to deliver notifications</li>
+                <li>Subscription status, anonymized transaction tokens, and basic digital purchase records</li>
             </ul>
             <p>When you upload a profile photo, Masoya only accesses the specific image you select using your device's file picker. The app does not access your camera or your files unless you explicitly choose a photo to upload.</p>
         </section>
@@ -682,6 +683,7 @@
                 <li>Deliver personalized or non-personalized advertisements</li>
                 <li>Measure ad performance and optimize campaign distributions</li>
                 <li>Deliver push notifications</li>
+                <li>Process purchase transactions and validate active premium subscriptions</li>
                 <li>Improve app performance and security</li>
                 <li>Detect spam, abuse, and fraudulent activity</li>
                 <li>Maintain app reliability</li>
@@ -692,11 +694,13 @@
         <!-- 6. Firebase and Third-Party Services -->
         <section class="card" id="firebase">
             <h2><span class="section-num">6</span> Third-Party Services</h2>
-            <p>Masoya uses trusted third-party services for authentication, database storage, app optimization, and delivery of contextually targeted or personalized advertising. These providers handle limited metadata or identifiers necessary to deliver app functions.</p>
+            <p>Masoya uses trusted third-party services for authentication, database storage, subscription verification, app optimization, and delivery of contextually targeted or personalized advertising. These providers handle limited metadata, purchase tokens, or identifiers necessary to deliver app functions.</p>
             <ul>
                 <li>Firebase Authentication (User sign-in management)</li>
                 <li>Cloud Firestore &amp; Firebase Storage (Database and file hosting)</li>
                 <li>Firebase Cloud Messaging (Push notifications delivery)</li>
+                <li>Google Play Billing (In-app processing and transactional checkout)</li>
+                <li>RevenueCat / Purchases Flutter (Premium entitlement status validation)</li>
                 <li>Google AdMob (Ad distribution and revenue tracking)</li>
             </ul>
             <p>Our advertising partners may utilize tracking technologies, cookies, or device tokens to serve relevant ads. You can easily modify your advertisement tracking preferences inside your Android or iOS system settings anytime.</p>
