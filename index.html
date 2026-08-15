@@ -366,24 +366,6 @@
             text-underline-offset: 3px;
         }
 
-        .deletion-link-box {
-            background: var(--accent-soft);
-            border: 1px solid var(--accent-border);
-            border-radius: var(--radius-sm);
-            padding: 14px 16px;
-            margin: 14px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            font-weight: 500;
-        }
-
-        .deletion-link-box .link-icon {
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
         .contact-row {
             display: flex;
             align-items: center;
@@ -512,10 +494,6 @@
                 color: #000;
                 border: 1px solid #ccc;
             }
-            .deletion-link-box {
-                background: #f9f9f9;
-                border: 1px solid #ccc;
-            }
         }
 
         @media (max-width: 720px) {
@@ -547,11 +525,6 @@
                 width: 40px;
                 height: 40px;
                 font-size: 18px;
-            }
-            .deletion-link-box {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 6px;
             }
         }
 
@@ -597,7 +570,7 @@
             <div class="meta-row">
                 <span class="pill"><span class="dot"></span> <strong>App:</strong>&nbsp;Masoya</span>
                 <span class="pill"><span class="dot"></span> <strong>Platform:</strong>&nbsp;Android &amp; iOS</span>
-                <span class="pill"><span class="dot"></span> <strong>Updated:</strong>&nbsp;June&nbsp;25,&nbsp;2026</span>
+                <span class="pill"><span class="dot"></span> <strong>Updated:</strong>&nbsp;August&nbsp;15,&nbsp;2026</span>
             </div>
         </header>
 
@@ -610,6 +583,7 @@
             <div class="toc-links" id="tocLinks">
                 <a href="#introduction">Introduction</a>
                 <a href="#information">Information We Collect</a>
+                <a href="#verification">Profile Verification</a>
                 <a href="#location">Location</a>
                 <a href="#notifications">Notifications</a>
                 <a href="#use">How We Use Data</a>
@@ -640,6 +614,7 @@
                 <li>Name or nickname</li>
                 <li>Age and gender</li>
                 <li>Profile photos that you choose to upload</li>
+                <li>Short (10-second) selfie video recordings recorded specifically for profile verification</li>
                 <li>Bio and other profile details</li>
                 <li>Likes, matches, and chat messages exchanged between users</li>
                 <li>Device and app usage information</li>
@@ -648,56 +623,70 @@
                 <li>Push notification tokens used to deliver notifications</li>
                 <li>Subscription status, anonymized transaction tokens, and basic digital purchase records</li>
             </ul>
-            <p>When you upload a profile photo, Masoya only accesses the specific image you select using your device's file picker. The app does not access your camera or your files unless you explicitly choose a photo to upload.</p>
+            <p>When you upload a profile photo, Masoya only accesses the specific image you select using your device's file picker. Camera and microphone/audio permissions are only requested when you choose to record a short 10-second verification video for profile authentication.</p>
         </section>
 
-        <!-- 3. Location Information -->
+        <!-- 3. Profile Verification -->
+        <section class="card" id="verification">
+            <h2><span class="section-num">3</span> Profile Verification &amp; Camera Access</h2>
+            <p>To keep Masoya safe, authentic, and free from impersonation or bots, we offer an optional Profile Verification feature.</p>
+            <p>When you initiate verification:</p>
+            <ul>
+                <li><strong>Camera &amp; Microphone Access:</strong> We request temporary hardware permissions to record a short, 10-second selfie video of your face directly inside the app.</li>
+                <li><strong>Human &amp; Moderator Review:</strong> An authorized team reviewer inspects your submitted 10-second verification video side-by-side with your uploaded profile photos to confirm identity match.</li>
+                <li><strong>Verified Badge:</strong> Once approved, a verification badge is attached to your public profile to signal authenticity to other users.</li>
+                <li><strong>Privacy Safeguard:</strong> Verification videos are used exclusively for identity validation. They are never published publicly, shared on your public profile, or sold to third parties.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Location Information -->
         <section class="card" id="location">
-            <h2><span class="section-num">3</span> Location Information</h2>
+            <h2><span class="section-num">4</span> Location Information</h2>
             <p>Masoya may request access to your location to help show nearby users and improve matching features.</p>
             <p>Location access is completely optional. You can allow or deny location permission at any time from your device settings.</p>
             <p>If location permission is disabled, nearby matching features may not work properly.</p>
             <p>We use approximate location information where possible to improve privacy and reduce unnecessary precision.</p>
         </section>
 
-        <!-- 4. Notifications -->
+        <!-- 5. Notifications -->
         <section class="card" id="notifications">
-            <h2><span class="section-num">4</span> Notifications</h2>
+            <h2><span class="section-num">5</span> Notifications</h2>
             <p>Masoya may send notifications for:</p>
             <ul>
                 <li>New messages</li>
                 <li>New matches</li>
-                <li>Account activity</li>
+                <li>Account activity and verification updates</li>
                 <li>Important updates</li>
             </ul>
             <p>Notifications are optional and can be disabled from the app settings or your device settings at any time.</p>
         </section>
 
-        <!-- 5. How We Use Your Information -->
+        <!-- 6. How We Use Your Information -->
         <section class="card" id="use">
-            <h2><span class="section-num">5</span> How We Use Your Information</h2>
+            <h2><span class="section-num">6</span> How We Use Your Information</h2>
             <p>We use collected information to:</p>
             <ul>
                 <li>Create and manage your account</li>
+                <li>Verify profile authenticity and issue verified badges</li>
                 <li>Provide matching and chat features</li>
                 <li>Deliver personalized or non-personalized advertisements</li>
                 <li>Measure ad performance and optimize campaign distributions</li>
                 <li>Deliver push notifications</li>
                 <li>Process purchase transactions and validate active premium subscriptions</li>
                 <li>Improve app performance and security</li>
-                <li>Detect spam, abuse, and fraudulent activity</li>
+                <li>Detect spam, abuse, impersonation, and fraudulent activity</li>
                 <li>Maintain app reliability</li>
                 <li>Provide customer support</li>
             </ul>
         </section>
 
-        <!-- 6. Firebase and Third-Party Services -->
+        <!-- 7. Firebase and Third-Party Services -->
         <section class="card" id="firebase">
-            <h2><span class="section-num">6</span> Third-Party Services</h2>
-            <p>Masoya uses trusted third-party services for authentication, database storage, subscription verification, app optimization, and delivery of contextually targeted or personalized advertising. These providers handle limited metadata, purchase tokens, or identifiers necessary to deliver app functions.</p>
+            <h2><span class="section-num">7</span> Third-Party Services</h2>
+            <p>Masoya uses trusted third-party services for authentication, database storage, subscription verification, app optimization, and delivery of contextually targeted or personalized advertising. These providers handle limited metadata, purchase tokens, media uploads, or identifiers necessary to deliver app functions.</p>
             <ul>
                 <li>Firebase Authentication (User sign-in management)</li>
-                <li>Cloud Firestore &amp; Firebase Storage (Database and file hosting)</li>
+                <li>Cloud Firestore &amp; Firebase Storage (Database, profile media, and secure verification video hosting)</li>
                 <li>Firebase Cloud Messaging (Push notifications delivery)</li>
                 <li>Google Play Billing (In-app processing and transactional checkout)</li>
                 <li>RevenueCat / Purchases Flutter (Premium entitlement status validation)</li>
@@ -707,16 +696,17 @@
             <p>We do not sell your personal information to third parties.</p>
         </section>
 
-        <!-- 7. Data Sharing -->
+        <!-- 8. Data Sharing -->
         <section class="card" id="sharing">
-            <h2><span class="section-num">7</span> Data Sharing</h2>
-            <p>Certain profile information you choose to provide, such as your name, age, bio, profile photo, and approximate location, may be visible to other users of the app.</p>
+            <h2><span class="section-num">8</span> Data Sharing</h2>
+            <p>Certain profile information you choose to provide, such as your name, age, bio, profile photo, verified status, and approximate location, may be visible to other users of the app.</p>
+            <p>Verification videos are kept strictly confidential for identity review by authorized staff and are never made publicly visible to other app members.</p>
             <p>We may also share information when required by law or when necessary to protect our rights, users, or the security of the platform.</p>
         </section>
 
-        <!-- 8. Account Deletion -->
+        <!-- 9. Account Deletion -->
         <section class="card" id="deletion">
-            <h2><span class="section-num">8</span> Account Deletion</h2>
+            <h2><span class="section-num">9</span> Account Deletion</h2>
             <p>You may delete your account at any time directly from within the app.</p>
             <p>You may also request account or data deletion by contacting us at:</p>
             <div class="contact-row">
@@ -725,42 +715,43 @@
             </div>
             <p>
                 When your account is deleted, we delete your authentication record,
-                profile information, and uploaded profile photos from our active systems,
+                profile information, uploaded profile photos, and submitted verification video media from our active systems,
                 unless retention is required for legal, security, fraud prevention,
                 or abuse prevention purposes.
             </p>
         </section>
 
-        <!-- 9. Data Retention -->
+        <!-- 10. Data Retention -->
         <section class="card" id="retention">
-            <h2><span class="section-num">9</span> Data Retention</h2>
+            <h2><span class="section-num">10</span> Data Retention</h2>
             <p>We retain your information only for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our agreements.</p>
+            <p>Submitted verification videos are retained only for as long as necessary to complete identity review and maintain account security, after which they are safely purged or archived in restricted storage.</p>
         </section>
 
-        <!-- 10. Data Security -->
+        <!-- 11. Data Security -->
         <section class="card" id="security">
-            <h2><span class="section-num">10</span> Data Security</h2>
+            <h2><span class="section-num">11</span> Data Security</h2>
             <p>We use reasonable technical and organizational safeguards to help protect your information, including secure communication and restricted database access.</p>
             <p>However, no online service can guarantee absolute security.</p>
         </section>
 
-        <!-- 11. Children's Privacy -->
+        <!-- 12. Children's Privacy -->
         <section class="card" id="children">
-            <h2><span class="section-num">11</span> Children's Privacy</h2>
+            <h2><span class="section-num">12</span> Children's Privacy</h2>
             <p>Masoya is intended only for users who are 18 years old or older.</p>
             <p>We do not knowingly collect personal information from children. Accounts found to belong to minors may be removed.</p>
         </section>
 
-        <!-- 12. Changes to This Policy -->
+        <!-- 13. Changes to This Policy -->
         <section class="card" id="changes">
-            <h2><span class="section-num">12</span> Changes to This Policy</h2>
+            <h2><span class="section-num">13</span> Changes to This Policy</h2>
             <p>We may update this Privacy Policy from time to time.</p>
             <p>Updated versions will be posted within the app or on our website with a revised "Last Updated" date.</p>
         </section>
 
-        <!-- 13. Contact Us -->
+        <!-- 14. Contact Us -->
         <section class="card" id="contact">
-            <h2><span class="section-num">13</span> Contact Us</h2>
+            <h2><span class="section-num">14</span> Contact Us</h2>
             <p>If you have questions about this Privacy Policy or your personal data, please contact us at:</p>
             <div class="contact-row">
                 <strong>Email:</strong>
